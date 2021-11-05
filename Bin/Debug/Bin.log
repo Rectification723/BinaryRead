@@ -1,3 +1,8 @@
 ﻿  main.cpp
-  Bin.vcxproj -> C:\Users\sn03947\Documents\Visual Studio 2015\Projects\Bin\Debug\Bin.exe
-  Bin.vcxproj -> C:\Users\sn03947\Documents\Visual Studio 2015\Projects\Bin\Debug\Bin.pdb (Partial PDB)
+  data_Input.cpp
+c:\users\sn03947\documents\visual studio 2015\projects\bin\binaryread\bin\data_input.cpp(23): warning C4244: “初始化”: 从“std::streamoff”转换到“long”，可能丢失数据
+c:\users\sn03947\documents\visual studio 2015\projects\bin\binaryread\bin\data_input.cpp(25): warning C4244: “初始化”: 从“std::streamoff”转换到“long”，可能丢失数据
+  正在生成代码...
+  LINK : 没有找到 C:\Users\sn03947\Documents\Visual Studio 2015\Projects\Bin\BinaryRead\Debug\Bin.exe 或上一个增量链接没有生成它；正在执行完全链接
+  Bin.vcxproj -> C:\Users\sn03947\Documents\Visual Studio 2015\Projects\Bin\BinaryRead\Debug\Bin.exe
+  Bin.vcxproj -> C:\Users\sn03947\Documents\Visual Studio 2015\Projects\Bin\BinaryRead\Debug\Bin.pdb (Partial PDB)

@@ -24,7 +24,8 @@ Cbinread::Cbinread(string name, int lenth)
 	inF.seekg(0, ios::end);
 	long m = inF.tellg();
 	size = (m - l) / lenth; // 
-	cout << name<<":size =" << size*2/10000000.0<<" M" << endl;
+	Bw = lenth;
+	cout << name<<":size =" << size/1000000.0<<" M" << endl;
 	inF.close();
 }
 /*****************************************************************************
@@ -41,46 +42,9 @@ Cbinread::Cbinread(string name, int lenth)
 * ***************************************************************************/
 long Cbinread::getDataSize()
 {
-	return size; 
+	return size-41; 
 }
-/*****************************************************************************
-* 函数名 ： getData
-* 功能   ： 返回数据的首地址
-* 输入参数： 无
-* 输出参数： 无
-* 返回值  ：
-* 说明   ：
-* 日期   ：
-* 作者   ：
-* 修改记录：
-* 修改时间：
-* 修改原因：
-* ***************************************************************************/
 
-float * Cbinread::getDatafloat()
-{
-	ifstream inF(Filename, ios::binary);
-	inF.open(Filename, ios::binary);
-	inF.clear();
-	
-	float* data = new float[size];
-	inF.read(reinterpret_cast<char*>(data), sizeof(float) * (size));
-	inF.close();
-
-	return data;
-}
-unsigned int * Cbinread::getDatauint()
-{
-	ifstream inF(Filename, ios::binary);
-	inF.open(Filename, ios::binary);
-	inF.clear();
-
-	unsigned int* data = new unsigned int[size];
-	inF.read(reinterpret_cast<char*>(data), sizeof(unsigned int) * (size));
-	inF.close();
-
-	return data;
-}
 
 
 Cbinread::~Cbinread()
